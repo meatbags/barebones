@@ -1,6 +1,14 @@
 <?php
 get_header();
 
+?>
+<div class='post'>
+  <div class='post__title noselect text-regular underlined'>
+    <?php echo get_bloginfo('description'); ?>
+  </div>
+</div>
+<?php
+
 $query = new WP_Query(array(
   'post_type' => 'post',
   'orderby' => 'menu_order'
