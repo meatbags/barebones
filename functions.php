@@ -1,4 +1,7 @@
 <?php
+
+remove_filter('the_content', 'wpautop');
+
 function ajax_load(){
   header("Content-Type: text/html");
 
