@@ -1,24 +1,23 @@
-$width: 800px;
-
 // colour
-$black: #000;
-$darkGrey: #222;
-$white: #fff;
-$lightGrey: #aaa;
-$colourBackgroundGradient: linear-gradient($darkGrey, $lightGrey);
-$colourBackgroundGradientAlt: linear-gradient($lightGrey, $darkGrey);
+$colourPrimary: #000;
+$colourBackground: #fff;
+
+// decoration
+$border: 1px solid black;
 
 // type
 $fontStack: 'WorkSans', Arial, sans-serif;
-$fontSizeSmall: 20px;
-$fontSizeRegular: 28px;
-$fontSizeLarge: 60px;
+$fontSizeSmall: 18px;
+$fontSizeMobile: 16px;
+$fontSizeRegular: 20px;
+$fontSizeLarge: 40px;
 
 // index
 $indexBackground: -1;
 
 // spacing
-$space: 10px;
+$space: 16px;
+$mobile: 960px;
 
 // animation
 $transition: 0.5s;

@@ -1,0 +1,134 @@
+$width: 960px;
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+
+  .left {
+    width: 35%;
+    display: flex;
+    justify-content: flex-end;
+    //border-right: $border;
+
+    .content__nav {
+      @extend .noselect;
+      width: 200px;
+      padding-top: $space * 3;
+
+      .nav__item {
+        width: 100%;
+        text-align: right;
+        font-weight: bold;
+        padding: $space/2 $space $space/2 $space;
+        cursor: pointer;
+        letter-spacing: 0.5px;
+
+        &.active {
+          outline: $border;
+          background: $colourPrimary;
+          color: $colourBackground;
+        }
+      }
+    }
+  }
+
+  .right {
+    width: 65%;
+
+    .content__body {
+      width: 100%;
+      height: 100vh;
+      overflow: scroll;
+      position: relative;
+
+      .content__body__inner {
+        width: 720px;
+
+        .post {
+          width: 100%;
+          padding: $space * 3;
+          padding-left: $space * 5;
+          padding-right: $space * 5;
+          border-bottom: $border;
+          line-height: 1.25;
+          letter-spacing: 0.2px;
+
+          .post__title {
+            padding-top: $space;
+            padding-bottom: $space * 2;
+            font-weight: bold;
+
+            &.active {
+              text-decoration: underline;
+            }
+          }
+
+          .post__body {
+            width: 100%;
+            text-align: justify;
+
+            p {
+              padding: 0;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .content__time {
+    position: relative;
+    display: none;
+
+    .time {
+      position: absolute;
+      left: 0;
+      top: 0;
+      transform-origin: top right;
+      transform: rotate(-90deg);
+
+      @media (max-width: $width) {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+
+    .left {
+      display: none;
+    }
+
+    .right {
+      width: 100%;
+
+      .content__body {
+        width: 100%;
+
+        .content__body__inner {
+          width: 100%;
+
+          .post {
+            padding: $space * 2;
+            font-size: $fontSizeMobile;
+          }
+        }
+      }
+    }
+
+    .content__time {
+      display: none;
+    }
+  }
+}

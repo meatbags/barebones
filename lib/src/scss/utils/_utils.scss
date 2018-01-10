@@ -10,8 +10,12 @@
   font-size: $fontSizeLarge;
 }
 
-.reveal-sibling {
+.mobile-show {
+  display: none;
 
+  @media screen and (max-width: $mobile) {
+    display: block;
+  }
 }
 
 .clickable {
